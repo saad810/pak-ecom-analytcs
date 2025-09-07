@@ -1,6 +1,7 @@
 import axios from 'axios';
 import fs from 'fs';
 import { parseStringPromise } from "xml2js";
+import chalk from 'chalk';
 import { JSON_DATA_DIR, XML_DATA_DIR } from './constants.js';
 export default async function fetchAndExtract(url) {
     try {
@@ -8,9 +9,9 @@ export default async function fetchAndExtract(url) {
         const response = await axios.get(url.href);
         try {
             fs.writeFileSync(`${XML_DATA_DIR}/${url.pathname?.slice(1, -3)}`, response.data);
-            console.log("File written successfully");
+            console.log(chalk.green("File write successful"));
         } catch (error) {
-            console.error("File write error:", error);
+            console.error(chalk.red("File write error:"), error);
         }
 
         // convert to xml to js
@@ -25,14 +26,14 @@ export default async function fetchAndExtract(url) {
                 priority: urlObj.priority ? urlObj.priority[0] : null,
             })
         );
-        console.log("TOTAL urls", urls.length); // total urls
+        console.log(chalk.blue("TOTAL urls"), urls.length); // total urls
 
         fs.writeFileSync(`${JSON_DATA_DIR}/${url.pathname?.slice(1, -7)}.json`, JSON.stringify(urls, null, 2));
-        console.log("XML to JS conversion successful");
+        console.log(chalk.green("XML to JSON conversion successful"));
         return urls.length;
 
     } catch (err) {
-        console.error("Decompression error:", err);
+        console.error(chalk.red("Decompression error:"), err);
         throw err;
     }
 }
