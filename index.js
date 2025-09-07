@@ -2,11 +2,8 @@ import fs from 'fs';
 import fetchAndExtract from './utils/fetchAndExtract.js';
 import { URLS_TO_PROCESS_PATH } from './utils/constants.js';
 import chalk from 'chalk';
-function extractUrl(filename) {
-    const data = fs.readFileSync(filename, 'utf-8');
-    console.log(chalk.blue(data));
-    return data.trim();
-}
+import { extractUrl } from './utils/globals.js';
+
 
 const url = new URL(extractUrl(URLS_TO_PROCESS_PATH));
 
