@@ -1,0 +1,7 @@
+check file directory before writing
+
+fs ans async fs
+
+
+
+ecery processed batch of links will be saved to processed links with all requried staruses and logs

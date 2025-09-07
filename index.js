@@ -4,6 +4,7 @@ import { extractUrl, getFilesinDir, getNextBatch } from './utils/globals.js';
 // import fetchAndExtract from './utils/fetchAndExtract.js';
 // import { URLS_TO_PROCESS_PATH} from './utils/constants.js';
 
+
 // const url = new URL(extractUrl(URLS_TO_PROCESS_PATH));
 // fetchAndExtract(url)
 //     .then(data => console.log(chalk.blue("processed", chalk.yellowBright(data)))) // first 500 chars
@@ -11,15 +12,14 @@ import { extractUrl, getFilesinDir, getNextBatch } from './utils/globals.js';
 
 
 const files = getFilesinDir('./data/jsonData/');
-console.log(files[0]);
+console.log(chalk.blue("Files in jsonData dir:", files.length, files));
 
 // read first 10 entries
 
 
 const data = fs.readFileSync(`./data/jsonData/${files[0]}`, 'utf-8');
-const jsonData = JSON.parse(data);
-// console.log(jsonData.slice(0,10));
-// console.log
-console.log("Batch 1",getNextBatch(jsonData));
-console.log("Batch 2",getNextBatch(jsonData));
-console.log("Batch 3",getNextBatch(jsonData));
+const batch = getNextBatch(JSON.parse(data));
+console.log(chalk.cyan("Batch-1", chalk.yellowBright(batch.length)));
+
+
+console.log(batch[0]);
