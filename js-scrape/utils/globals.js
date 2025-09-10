@@ -2,6 +2,8 @@ import chalk from "chalk";
 import fs from "fs";
 import path from "path";
 import { BATCH_SIZE } from "./constants.js";
+import axios from "axios";
+import { bodyOnly } from "../scraping/cheerio.js";
 
 let startAt = 0;
 let endAt = BATCH_SIZE;
@@ -31,4 +33,23 @@ export function getNextBatch(jsonData) {
     endAt += BATCH_SIZE;
 
     return batch;
+}
+
+
+export async function fetchHtml(url) {
+    try {
+        const response = await axios.get(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+            }
+        });
+        const body = bodyOnly(response.data);
+        if (!body) {
+            throw new Error("No body content found");
+        }
+        return body;
+    } catch (error) {
+        console.error("Error fetching HTML:", error);
+        throw error;
+    }
 }
