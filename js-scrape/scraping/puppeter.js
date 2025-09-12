@@ -87,45 +87,13 @@ export async function getProductDatawithPuppeteer(url) {
 
         // description
 
-        // const highlightsEl = container.querySelector(
-        //     ".pdp-product-desc .pdp-product-highlights"
-        // );
-        // const highlights = highlightsEl
-        //     ? Array.from(highlightsEl.querySelectorAll("li")).map(li =>
-        //         li.textContent.trim()
-        //     )
-        //     : [];
-
-        // const fullDescEl = container.querySelector(
-        //     ".detail-content p"
-        // );
-        // const fullDescription = fullDescEl ? fullDescEl.textContent.trim() : null;
-
-        // const specEls = container.querySelectorAll(
-        //     ".pdp-general-features ul.specification-keys li.key-li"
-        // );
-        // const specifications = {};
-        // specEls.forEach(li => {
-        //     const key = li.querySelector(".key-title")?.textContent.trim();
-        //     const value = li.querySelector(".key-value")?.textContent.trim();
-        //     if (key && value) specifications[key] = value;
-        // });
-        // const description = {
-        //     highlights,
-        //     fullDescription,
-        //     specifications
-        // };
+        
 
 
         // reviews
 
         const reviewEl = document.querySelector("#module_product_review");
-        // reviewEl.scrollIntoView();
-        // const scoreEl = reviewEl.querySelector(".score");
-        // //    take all spans
-        // const scoreSpans = scoreEl ? Array.from(scoreEl.querySelectorAll("span")) : [];
-   
-
+       
 
         return {
             pricing,
@@ -134,7 +102,6 @@ export async function getProductDatawithPuppeteer(url) {
             ratings,
             questionsAsked,
             brand,
-            reviewEl,
         //    scoreSpans
         };
     });
