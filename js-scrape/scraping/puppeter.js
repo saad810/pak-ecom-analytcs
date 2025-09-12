@@ -6,7 +6,11 @@ const browser = await puppeteer.launch({ headless: true });
 
 export async function getProductDatawithPuppeteer(url) {
     const page = await browser.newPage();
-    await page.goto(url, { waitUntil: "networkidle2" });
+    try {
+        await page.goto(url, { waitUntil: "networkidle2", timeout: 240000 });
+    } catch (error) {
+        console.error(chalk.red("Error navigating to URL:"),url, error);
+    }
 
     // Wait for breadcrumb container & product container
     await page.waitForSelector("#J_breadcrumb_list");

@@ -3563,3 +3563,401 @@ Call log:
 2025-09-12 21:27:33 [scrapy.extensions.logstats] INFO: Crawled 87 pages (at 4 pages/min), scraped 84 items (at 4 items/min)
 2025-09-12 21:28:33 [scrapy.extensions.logstats] INFO: Crawled 90 pages (at 3 pages/min), scraped 87 items (at 3 items/min)
 2025-09-12 21:29:33 [scrapy.extensions.logstats] INFO: Crawled 90 pages (at 0 pages/min), scraped 87 items (at 0 items/min)
+2025-09-12 21:30:33 [scrapy.extensions.logstats] INFO: Crawled 92 pages (at 2 pages/min), scraped 89 items (at 2 items/min)
+2025-09-12 21:31:33 [scrapy.extensions.logstats] INFO: Crawled 92 pages (at 0 pages/min), scraped 89 items (at 0 items/min)
+2025-09-12 21:32:33 [scrapy.extensions.logstats] INFO: Crawled 93 pages (at 1 pages/min), scraped 90 items (at 1 items/min)
+2025-09-12 21:33:33 [scrapy.extensions.logstats] INFO: Crawled 93 pages (at 0 pages/min), scraped 90 items (at 0 items/min)
+2025-09-12 21:34:06 [scrapy-playwright] WARNING: Closing page due to failed request: <GET https://www.daraz.pk/i144644598-s1306218557.html> exc_type=<class 'playwright._impl._errors.TimeoutError'> exc_msg=Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144644598-s1306218557.html", waiting until "load"
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144644598-s1306218557.html", waiting until "load"
+
+2025-09-12 21:34:06 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.daraz.pk/i144644598-s1306218557.html>
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\_utils.py", line 123, in _handle_coro
+    result = await coro
+             ^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 380, in _download_request
+    return await self._download_request_with_retry(request=request, spider=spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144644598-s1306218557.html", waiting until "load"
+
+2025-09-12 21:34:33 [scrapy.extensions.logstats] INFO: Crawled 93 pages (at 0 pages/min), scraped 90 items (at 0 items/min)
+2025-09-12 21:35:33 [scrapy.extensions.logstats] INFO: Crawled 93 pages (at 0 pages/min), scraped 90 items (at 0 items/min)
+2025-09-12 21:36:06 [scrapy-playwright] WARNING: Closing page due to failed request: <GET https://www.daraz.pk/i144644627-s1306218596.html> exc_type=<class 'playwright._impl._errors.TimeoutError'> exc_msg=Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144644627-s1306218596.html", waiting until "load"
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144644627-s1306218596.html", waiting until "load"
+
+2025-09-12 21:36:06 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.daraz.pk/i144644627-s1306218596.html>
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\_utils.py", line 123, in _handle_coro
+    result = await coro
+             ^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 380, in _download_request
+    return await self._download_request_with_retry(request=request, spider=spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144644627-s1306218596.html", waiting until "load"
+
+2025-09-12 21:36:33 [scrapy.extensions.logstats] INFO: Crawled 93 pages (at 0 pages/min), scraped 90 items (at 0 items/min)
+2025-09-12 21:37:33 [scrapy.extensions.logstats] INFO: Crawled 93 pages (at 0 pages/min), scraped 90 items (at 0 items/min)
+2025-09-12 21:38:06 [scrapy-playwright] WARNING: Closing page due to failed request: <GET https://www.daraz.pk/i144658415-s1306228306.html> exc_type=<class 'playwright._impl._errors.TimeoutError'> exc_msg=Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144658415-s1306228306.html", waiting until "load"
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144658415-s1306228306.html", waiting until "load"
+
+2025-09-12 21:38:06 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.daraz.pk/i144658415-s1306228306.html>
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\_utils.py", line 123, in _handle_coro
+    result = await coro
+             ^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 380, in _download_request
+    return await self._download_request_with_retry(request=request, spider=spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144658415-s1306228306.html", waiting until "load"
+
+2025-09-12 21:38:33 [scrapy.extensions.logstats] INFO: Crawled 93 pages (at 0 pages/min), scraped 90 items (at 0 items/min)
+2025-09-12 21:39:33 [scrapy.extensions.logstats] INFO: Crawled 94 pages (at 1 pages/min), scraped 91 items (at 1 items/min)
+2025-09-12 21:40:33 [scrapy.extensions.logstats] INFO: Crawled 95 pages (at 1 pages/min), scraped 92 items (at 1 items/min)
+2025-09-12 21:41:33 [scrapy.extensions.logstats] INFO: Crawled 95 pages (at 0 pages/min), scraped 92 items (at 0 items/min)
+2025-09-12 21:41:48 [scrapy-playwright] WARNING: Closing page due to failed request: <GET https://www.daraz.pk/i144664350-s1306226386.html> exc_type=<class 'playwright._impl._errors.TimeoutError'> exc_msg=Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144664350-s1306226386.html", waiting until "load"
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144664350-s1306226386.html", waiting until "load"
+
+2025-09-12 21:41:48 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.daraz.pk/i144664350-s1306226386.html>
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\_utils.py", line 123, in _handle_coro
+    result = await coro
+             ^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 380, in _download_request
+    return await self._download_request_with_retry(request=request, spider=spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144664350-s1306226386.html", waiting until "load"
+
+2025-09-12 21:42:33 [scrapy.extensions.logstats] INFO: Crawled 96 pages (at 1 pages/min), scraped 93 items (at 1 items/min)
+2025-09-12 21:43:33 [scrapy.extensions.logstats] INFO: Crawled 96 pages (at 0 pages/min), scraped 93 items (at 0 items/min)
+2025-09-12 21:44:33 [scrapy.extensions.logstats] INFO: Crawled 97 pages (at 1 pages/min), scraped 94 items (at 1 items/min)
+2025-09-12 21:45:33 [scrapy.extensions.logstats] INFO: Crawled 97 pages (at 0 pages/min), scraped 94 items (at 0 items/min)
+2025-09-12 21:45:44 [scrapy-playwright] WARNING: Closing page due to failed request: <GET https://www.daraz.pk/i144672244-s1306238568.html> exc_type=<class 'playwright._impl._errors.TimeoutError'> exc_msg=Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144672244-s1306238568.html", waiting until "load"
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144672244-s1306238568.html", waiting until "load"
+
+2025-09-12 21:45:44 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.daraz.pk/i144672244-s1306238568.html>
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\_utils.py", line 123, in _handle_coro
+    result = await coro
+             ^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 380, in _download_request
+    return await self._download_request_with_retry(request=request, spider=spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\scrapy_playwright\handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ecommerce-analytics\python-scrape\env\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to "https://www.daraz.pk/i144672244-s1306238568.html", waiting until "load"
+
+2025-09-12 21:46:33 [scrapy.extensions.logstats] INFO: Crawled 99 pages (at 2 pages/min), scraped 96 items (at 2 items/min)
+2025-09-12 21:47:33 [scrapy.extensions.logstats] INFO: Crawled 99 pages (at 0 pages/min), scraped 96 items (at 0 items/min)
+2025-09-12 21:48:33 [scrapy.extensions.logstats] INFO: Crawled 100 pages (at 1 pages/min), scraped 97 items (at 1 items/min)
+2025-09-12 21:49:33 [scrapy.extensions.logstats] INFO: Crawled 103 pages (at 3 pages/min), scraped 100 items (at 3 items/min)
+2025-09-12 21:50:33 [scrapy.extensions.logstats] INFO: Crawled 105 pages (at 2 pages/min), scraped 102 items (at 2 items/min)
+2025-09-12 21:51:33 [scrapy.extensions.logstats] INFO: Crawled 107 pages (at 2 pages/min), scraped 104 items (at 2 items/min)
+2025-09-12 21:52:33 [scrapy.extensions.logstats] INFO: Crawled 108 pages (at 1 pages/min), scraped 105 items (at 1 items/min)
+2025-09-12 21:53:33 [scrapy.extensions.logstats] INFO: Crawled 109 pages (at 1 pages/min), scraped 106 items (at 1 items/min)
+2025-09-12 21:54:33 [scrapy.extensions.logstats] INFO: Crawled 112 pages (at 3 pages/min), scraped 109 items (at 3 items/min)
+2025-09-12 21:55:33 [scrapy.extensions.logstats] INFO: Crawled 113 pages (at 1 pages/min), scraped 110 items (at 1 items/min)
+2025-09-12 21:56:33 [scrapy.extensions.logstats] INFO: Crawled 114 pages (at 1 pages/min), scraped 111 items (at 1 items/min)
+2025-09-12 21:57:33 [scrapy.extensions.logstats] INFO: Crawled 116 pages (at 2 pages/min), scraped 113 items (at 2 items/min)
+2025-09-12 21:58:33 [scrapy.extensions.logstats] INFO: Crawled 117 pages (at 1 pages/min), scraped 114 items (at 1 items/min)
+2025-09-12 21:59:33 [scrapy.extensions.logstats] INFO: Crawled 117 pages (at 0 pages/min), scraped 114 items (at 0 items/min)
+2025-09-12 22:00:33 [scrapy.extensions.logstats] INFO: Crawled 119 pages (at 2 pages/min), scraped 116 items (at 2 items/min)
+2025-09-12 22:01:33 [scrapy.extensions.logstats] INFO: Crawled 122 pages (at 3 pages/min), scraped 119 items (at 3 items/min)
+2025-09-12 22:02:33 [scrapy.extensions.logstats] INFO: Crawled 125 pages (at 3 pages/min), scraped 122 items (at 3 items/min)
+2025-09-12 22:03:33 [scrapy.extensions.logstats] INFO: Crawled 128 pages (at 3 pages/min), scraped 125 items (at 3 items/min)
+2025-09-12 22:04:33 [scrapy.extensions.logstats] INFO: Crawled 131 pages (at 3 pages/min), scraped 128 items (at 3 items/min)
+2025-09-12 22:05:33 [scrapy.extensions.logstats] INFO: Crawled 133 pages (at 2 pages/min), scraped 130 items (at 2 items/min)
+2025-09-12 22:06:33 [scrapy.extensions.logstats] INFO: Crawled 137 pages (at 4 pages/min), scraped 134 items (at 4 items/min)
+2025-09-12 22:07:33 [scrapy.extensions.logstats] INFO: Crawled 139 pages (at 2 pages/min), scraped 136 items (at 2 items/min)
+2025-09-12 22:08:33 [scrapy.extensions.logstats] INFO: Crawled 142 pages (at 3 pages/min), scraped 139 items (at 3 items/min)
+2025-09-12 22:09:33 [scrapy.extensions.logstats] INFO: Crawled 145 pages (at 3 pages/min), scraped 142 items (at 3 items/min)
+2025-09-12 22:10:33 [scrapy.extensions.logstats] INFO: Crawled 148 pages (at 3 pages/min), scraped 145 items (at 3 items/min)
+2025-09-12 22:11:33 [scrapy.extensions.logstats] INFO: Crawled 149 pages (at 1 pages/min), scraped 146 items (at 1 items/min)
+2025-09-12 22:12:33 [scrapy.extensions.logstats] INFO: Crawled 150 pages (at 1 pages/min), scraped 147 items (at 1 items/min)

@@ -1,0 +1,25 @@
+{
+  "pricing": {
+    "salePrice": "Rs. 999",
+    "fullPrice": null,
+    "discountPercentage": null
+  },
+  "breadcrumbLinks": [
+    {
+      "href": "https://www.daraz.pk/phones-tablets/",
+      "text": "Mobiles & Tablets"
+    },
+    {
+      "href": "https://www.daraz.pk/mobiles-tablets-accessories/",
+      "text": "Mobile Accessories"
+    },
+    {
+      "href": "https://www.daraz.pk/selfie-sticks/",
+      "text": "Selfie Sticks"
+    }
+  ],
+  "productTitle": "Selfie Stick",
+  "ratings": null,
+  "questionsAsked": null,
+  "brand": "No Brand"
+}
