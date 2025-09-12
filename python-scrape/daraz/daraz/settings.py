@@ -94,9 +94,28 @@ DOWNLOAD_HANDLERS = {
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 50000
 PLAYWRIGHT_LAUNCH_OPTIONS = {
-    "headless": True,
-
+   "headless": True,  # change to False if you want to see browser
+    "args": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "timeout": 60 * 1000,
 }
+
+# Concurrency and throttling
+CONCURRENT_REQUESTS = 16
+CONCURRENT_REQUESTS_PER_DOMAIN = 4
+DOWNLOAD_DELAY = 0.5  # avoid anti-bot
+PLAYWRIGHT_MAX_PAGES_PER_CONTEXT = 1
+
+# Retry
+RETRY_ENABLED = True
+RETRY_TIMES = 3
+RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408]
+
+# HTTP cache to speed up repeated runs
+HTTPCACHE_ENABLED = True
+HTTPCACHE_EXPIRATION_SECS = 86400  # 1 day
+HTTPCACHE_DIR = 'httpcache'
+
+
 
 LOG_ENABLED = True
 LOG_LEVEL = "INFO"   

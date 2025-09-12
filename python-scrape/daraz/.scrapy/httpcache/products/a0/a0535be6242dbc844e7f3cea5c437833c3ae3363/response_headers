@@ -1,0 +1,17 @@
+Cache-Control: no-cache, no-store, private
+Content-Type: text/html; charset=utf-8
+Date: Fri, 12 Sep 2025 13:08:43 GMT
+Eagleeye-Traceid: 213bd74d17576825236526033e0837
+Server: Tengine/Aserver
+Set-Cookie: hng=PK|en-PK|PKR|586; path=/; max-age=2592000; expires=Sun, 12 Oct 2025 13:08:43 GMT; domain=daraz.pk
+hng.sig=sHyOy6N6gYGQ_GcKU4kp-kx70isi09oesxAEdfFoKsA; path=/; max-age=2592000; expires=Sun, 12 Oct 2025 13:08:43 GMT; domain=daraz.pk
+EGG_SESS=S_Gs1wHo9OvRHCMp98md7O1r5XbNCzyam5gmOAmg7F_Q5evbjyYyW7M9e0L0qFDEQ7y_Q_LFC4MbYD77_OFB_cUSFn9T_tqu9S_XLe_OeHKN45jkRk_BxCYYOpu_vS8qcjdns2_6yd-HLjrh_944AehabdpoYKjDhPcxV-l1wYE=; path=/; max-age=86400; expires=Sat, 13 Sep 2025 13:08:43 GMT; secure; httponly
+Strict-Transport-Security: max-age=31536000
+Timing-Allow-Origin: *
+Vary: Accept-Encoding, Origin
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Readtime: 39
+X-Server-Id: 590c5591a813ea820754c9d144c6ecc3cf2ba65fffc8c928816c0f0fc00a6113
+X-Xss-Protection: 1; mode=block
